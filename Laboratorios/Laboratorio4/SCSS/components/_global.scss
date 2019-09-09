@@ -1,0 +1,28 @@
+$color-1: purple;
+$color-2: green;
+$color-3: blue;
+$color-4: white;
+$color-5: black;
+$color-6: gray;
+
+@mixin set-dimensions($width, $height){
+    width: $width;
+    height: $height;
+}
+
+body {
+    @include set-dimensions(auto, 100vh);
+
+    box-sizing: border-box;
+    overflow: hidden;
+    background-image: url(https://cachorrosdelaweb.com/wp-content/uploads/2017/04/hCoE7ZJ.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding: 1em 5%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }

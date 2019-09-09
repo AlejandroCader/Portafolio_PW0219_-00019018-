@@ -1,0 +1,45 @@
+main {
+    @include set-dimensions(50%,auto);
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+
+    &>img{
+        @include set-dimensions(25%,auto);
+        margin: 1em;
+        background-color: rgba($color-5, 0.5);
+        border-radius: 5px;
+    }
+    &>hr{
+        @include set-dimensions(75%,auto);
+        background: $color-4;
+        height: 7px;
+        border-radius: 5px;
+        border: none;
+    }
+    &>.logos{
+        @include set-dimensions(100%,auto);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+        >img {
+            @include set-dimensions(5em,5em);
+            object-fit: cover;
+            margin: 0.5em;
+            background-color: $color-4;
+            border: 1px solid $color-5;
+            border-radius: 100%;
+            opacity: 0.7;
+          }
+          
+        &:hover {
+            opacity: 1;
+        }
+    }
+  }
+
+  
+  
