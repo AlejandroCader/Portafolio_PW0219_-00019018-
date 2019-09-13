@@ -1,0 +1,30 @@
+@mixin set-dimensions($width, $height){
+    width: $width;
+    height: $height;
+}
+
+body {
+    @include set-dimensions(auto, 100vh);
+    box-sizing: border-box;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(https://cachorrosdelaweb.com/wp-content/uploads/2017/04/hCoE7ZJ.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding: 1em 5%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .btn {
+    color: $color-4;
+    margin: 0.5em;
+    padding: 0.8em;
+    border-radius: 0.5em;
+    box-shadow: 1px 1px 1px $color-5;
+    background: $color-6;
+  }

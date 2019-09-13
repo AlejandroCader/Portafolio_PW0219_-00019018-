@@ -1,0 +1,16 @@
+$color-1: whitesmoke;
+$color-2: rgb(0,0,0);
+$color-3: rgb(255, 255, 255);
+$color-4: white;
+$color-5: black;
+$color-6: gray;
+$color-7: purple;
+$color-8: green;
+$color-9: blue;
+
+
+
+@import "components/global";
+@import "components/footer";
+@import "components/nav";
+@import "components/main";
