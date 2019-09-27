@@ -1,4 +1,4 @@
-function tipos(x){
+function types(x){
     let n=0, s=0, b=0, u=0, o=0;
     for(i=0; i<x.length; i++){
         switch(typeof x[i]){
