@@ -27,14 +27,15 @@ let addStudent = (carnet, schedule, late) => {
  <td> ${schedule}</td>
  <td> ${datetime.toLocaleString()}</td>
  <td> ${late}</td>`;
-  table_body.appendChild(new_row);
 
-  
+  table_body.appendChild(new_row); 
   var cellContainer = document.createElement("td");
   var deleteButton = document.createElement("button");
+  var confirmar = document.createElement("input");
+  confirmar.type= Text;
   deleteButton.classList.add("btn");
   deleteButton.classList.add("btn-danger");
-  deleteButton.innerText = "ELiminar";
+  deleteButton.innerText = "Eliminar";
 
   deleteButton.value=counterId;
   deleteButton.addEventListener("click", event=>{
@@ -51,8 +52,9 @@ let addStudent = (carnet, schedule, late) => {
   });
  
   cellContainer.appendChild(deleteButton);
-  
+  cellContainer.appendChild(confirmar);
   new_row.appendChild(cellContainer);
+  new_row.appendChild(confirmar);
   counterId++;
 };
 
