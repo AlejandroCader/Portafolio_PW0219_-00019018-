@@ -1,3 +1,7 @@
+#profile {
+  background-color: #d9dfdf;
+}
+
 #lunes {
   background-color: #d9dfdf;
 }
@@ -16,6 +20,13 @@
 
 .hidden {
   display: none;
+}
+
+header img{
+width: 15%;
+height: auto;
+display: block;
+margin: auto;
 }
 
 body h1 {
@@ -41,10 +52,16 @@ div {
   align-content: space-around;
 }
 
+div p {
+  text-align: justify;
+  margin: 1em 2em 1em 2em;
+}
+
 div > img {
-  width: 50%;
   height: auto;
-  margin: auto;
+  width: 30%;
+  height: auto;
+  margin: 2em auto 2em auto;
   display: flex;
   align-content: space-between;
 }

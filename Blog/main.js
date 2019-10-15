@@ -38,4 +38,5 @@ window.onload = function() {
     show.classList.remove("hidden");
     console.log(show);
   });
+
 };
