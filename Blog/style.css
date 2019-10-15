@@ -1,0 +1,50 @@
+#lunes {
+  background-color: #d9dfdf;
+}
+#martes {
+  background-color: #d9dfdf;
+}
+#miercoles {
+  background-color: #d9dfdf;
+}
+#jueves {
+  background-color: #d9dfdf;
+}
+#viernes {
+  background-color: #d9dfdf;
+}
+
+.hidden {
+  display: none;
+}
+
+body h1 {
+  text-align: center;
+}
+
+.blog {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  margin: 2em;
+}
+.blog a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  text-align: center;
+}
+
+div {
+  display: grid;
+  grid-auto-flow: row;
+  align-content: space-around;
+}
+
+div > img {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  align-content: space-between;
+}
