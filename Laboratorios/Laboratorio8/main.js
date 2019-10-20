@@ -14,10 +14,10 @@ let addStudent = (carnet, schedule, late) => {
   let datetime = new Date();
 
   rows.push({
-    "id": counterId,
-    "carnet": carnet,
-    "schedule": schedule,
-    "late": late
+    id: counterId,
+    carnet: carnet,
+    schedule: schedule,
+    late: late
   });
 
   console.log(rows);
@@ -28,33 +28,43 @@ let addStudent = (carnet, schedule, late) => {
  <td> ${datetime.toLocaleString()}</td>
  <td> ${late}</td>`;
 
-  table_body.appendChild(new_row); 
+  table_body.appendChild(new_row);
   var cellContainer = document.createElement("td");
   var deleteButton = document.createElement("button");
   var confirmar = document.createElement("input");
-  confirmar.type= Text;
+
+  confirmar.type = Text;
   deleteButton.classList.add("btn");
   deleteButton.classList.add("btn-danger");
+
   deleteButton.innerText = "Eliminar";
+  deleteButton.value = counterId;
+  confirmar.id = "input-" + counterId;
 
-  deleteButton.value=counterId;
-  deleteButton.addEventListener("click", event=>{
+  deleteButton.addEventListener("click", event => {
     var idElement = event.srcElement.value;
-    var TrToDelete = document.querySelector(`button[value='${idElement}']`).parentElement.parentElement;
-    table_body.removeChild(TrToDelete);
-    console.log(TrToDelete);
+    var inputConfirm = document.querySelector(`input[id='input-${idElement}']`);
+    var confirm = document.querySelector(`button[value='${idElement}']`)
+      .parentElement.parentElement.firstChild;
+    var trToDelete = document.querySelector(`button[value='${idElement}']`)
+      .parentElement.parentElement;
 
-    rows.forEach((item, index)=>{
-      if(item.id = idElement){
-        rows.splice(index, 1);
-      }
-    });
+    if (confirm.textContent == inputConfirm.value) {
+      table_body.removeChild(trToDelete);
+
+      rows.forEach((item, index) => {
+        if ((item.id = idElement)) {
+          rows.splice(index, 1);
+        }
+      });
+    }
   });
- 
+
   cellContainer.appendChild(deleteButton);
   cellContainer.appendChild(confirmar);
   new_row.appendChild(cellContainer);
   new_row.appendChild(confirmar);
+  table_body.appendChild(new_row);
   counterId++;
 };
 
