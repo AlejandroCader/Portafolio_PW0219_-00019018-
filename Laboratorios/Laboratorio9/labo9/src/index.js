@@ -18,6 +18,14 @@ class Tabla extends React.Component {
     uniqueKey++;
   };
 
+  handleDeleteRow(i) {
+    let rows = [...this.state.rows];
+    rows.splice(i, 1);
+    this.setState({
+      rows: rows
+    });
+  }
+
   renderRows() {
     return this.state.rows.map(row => {
       console.log(row);
@@ -28,7 +36,12 @@ class Tabla extends React.Component {
           <td>{new Date().toLocaleDateString()}</td>
           <td>{row.late}</td>
           <td>
-            <button value={uniqueKey} className="btn" className="btn-danger">
+            <button
+              value={uniqueKey}
+              className="btn"
+              className="btn-danger"
+              onClick={() => this.handleDeleteRow()}
+            >
               Drop
             </button>
           </td>
